@@ -3,7 +3,8 @@ public class Solution {
         int max = 0;
             for (int i = 0; i < sentences.Length; i++)
             {
-                int current = sentences[i].Split(" ").Length;
+                string[] splitted = sentences[i].Split(" ");
+                int current = splitted.Length;
                 if (current > max)
                     max = current;
             }
