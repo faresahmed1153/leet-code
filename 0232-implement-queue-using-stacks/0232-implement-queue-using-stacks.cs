@@ -1,36 +1,52 @@
 public class MyQueue
         {
 
-            LinkedList<int> obj;
+            public Stack<int> stack;
+            public Stack<int> stack2;
+
             public MyQueue()
             {
-                obj = new LinkedList<int>();
+                stack = new Stack<int>();
+                stack2 = new Stack<int>();
             }
 
             public void Push(int x)
             {
-                obj.AddLast(x);
+
+                stack.Push(x);
+                stack2.Clear();
+                for (int i = 0; i <stack.Count ; i++)
+                {
+                    stack2.Push(stack.ElementAt(i));
+                }
             }
 
             public int Pop()
             {
-                int first = obj.First();
-                obj.RemoveFirst();
-                return first;
+
+               
+                stack.Clear();
+                int removed = stack2.Pop();
+                for (int i = 0; i < stack2.Count; i++)
+                {
+                    stack.Push(stack2.ElementAt(i));
+                }
+
+                return removed;
             }
 
             public int Peek()
             {
-                return obj.First();
+                
+                return stack2.FirstOrDefault();
             }
 
             public bool Empty()
-            {
-                return obj.First == null;
+            { 
+                return stack2.Count == 0;
             }
 
         }
-
 /**
  * Your MyQueue object will be instantiated and called as such:
  * MyQueue obj = new MyQueue();
