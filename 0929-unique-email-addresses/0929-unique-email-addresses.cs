@@ -1,6 +1,6 @@
 public class Solution {
     public int NumUniqueEmails(string[] emails) {
-     List<string> filteredEmails = new List<string>();
+    HashSet<string> filteredEmails = new HashSet<string>();
 
             for (int i = 0; i < emails.Length; i++)
             {
@@ -23,6 +23,6 @@ public class Solution {
 
             }
 
-            return filteredEmails.Distinct().Count();
+            return filteredEmails.Count();
 }
 }
