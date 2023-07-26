@@ -13,7 +13,7 @@ public class Solution {
                         {
                             sumOfIndex = i + j;
                             list.Clear();
-                            list.AddFirst(list1[i]);
+                            list.AddLast(list1[i]);
 
                         }
                         else if (i + j == sumOfIndex)
