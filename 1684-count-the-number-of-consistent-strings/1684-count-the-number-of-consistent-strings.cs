@@ -1,7 +1,7 @@
 public class Solution {
     public int CountConsistentStrings(string allowed, string[] words) {
           HashSet<char> letter = new HashSet<char>();
-            LinkedList<string> list = new LinkedList<string>(words);
+           List<string> list = new List<string>(words);
             for (int i = 0; i < allowed.Length; i++)
 
                 letter.Add(allowed[i]);
