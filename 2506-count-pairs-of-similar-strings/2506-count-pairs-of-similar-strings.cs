@@ -6,21 +6,16 @@ public class Solution {
             {
                 list.Add(string.Concat(words[i].ToCharArray().Distinct()));
             }
-            
-            for (int k = 0; k < list.Count; k++)
+
+            for (int i = 0; i < list.Count; i++)
             {
 
-                for (int i = k + 1; i < list.Count; i++)
-                {
+                for (int j = i + 1; j < list.Count; j++)
+                
 
-                    string x = string.Concat(list[k].OrderBy(x => x));
-                    string y = string.Concat(list[i].OrderBy(x => x));
-                    if (x == y)
-                    {
+                    if (string.Concat(list[i].OrderBy(x => x)) == string.Concat(list[j].OrderBy(x => x)))
+                    
                         similarPairs++;
-                    }
-
-                }
             }
             return similarPairs;
     }
