@@ -4,7 +4,7 @@ public class Solution {
             LinkedList<string> list = new LinkedList<string>();
             for (int i = 0; i < words.Length; i++)
 
-                list.AddLast(string.Concat(words[i].ToCharArray().Distinct()));
+                list.AddFirst(string.Concat(words[i].ToCharArray().Distinct()));
    
 
             for (int i = 0; i < list.Count; i++)
