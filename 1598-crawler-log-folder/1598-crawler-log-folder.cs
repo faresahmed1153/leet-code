@@ -3,14 +3,14 @@ public class Solution {
         Stack<int> st = new Stack<int>();
         for(int i =0 ;i< logs.Length;i++)
         {
-            string s = logs[i];
-            if(s == "../")
+            
+            if(logs[i] == "../")
             {
                 if(st.Count != 0)
                 {
                     st.Pop();
                 }
-            }else if(s == "./")
+            }else if(logs[i] == "./")
             {
                 continue;
             }else
