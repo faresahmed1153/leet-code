@@ -1,17 +1,24 @@
 public class Solution {
     public int MinOperations(string[] logs) {
-        int MinOperations = 0;
-            for (int i = 0; i < logs.Length; i++)
+        Stack<int> st = new Stack<int>();
+        for(int i =0 ;i< logs.Length;i++)
+        {
+            string s = logs[i];
+            if(s == "../")
             {
-                if (logs[i] != "../" && logs[i] != "./")
-                    MinOperations++;
-
-                else if (logs[i] == "../")
-                    if (MinOperations > 0)
-                        MinOperations--;
-
-
+                if(st.Count != 0)
+                {
+                    st.Pop();
+                }
+            }else if(s == "./")
+            {
+                continue;
+            }else
+            {
+                st.Push(0);
             }
-            return MinOperations;
+        }    
+
+        return st.Count;
     }
 }
