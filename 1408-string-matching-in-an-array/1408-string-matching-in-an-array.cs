@@ -9,15 +9,13 @@ public class Solution {
                     
                         StringMatching.Add(words[j]);
                         
-                    
-                        
 
                     else
                     {
                         if (words[j].Contains(words[i]))
                         {
                             StringMatching.Add(words[i]);
-                            break;
+                            
                         }
                             
                     }
