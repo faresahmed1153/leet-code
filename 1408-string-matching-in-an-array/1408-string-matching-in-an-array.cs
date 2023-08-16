@@ -15,7 +15,7 @@ public class Solution {
                         if (words[j].Contains(words[i]))
                         {
                             StringMatching.Add(words[i]);
-                            
+                            break;
                         }
                             
                     }
