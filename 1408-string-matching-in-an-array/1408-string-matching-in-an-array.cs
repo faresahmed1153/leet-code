@@ -6,10 +6,8 @@ public class Solution {
                 for (int j = i + 1; j < words.Length; j++)
                 {
                     if (words[i].Contains(words[j]))
-                    
-                        StringMatching.Add(words[j]);
+                            StringMatching.Add(words[j]);
                         
-
                     else
                     {
                         if (words[j].Contains(words[i]))
