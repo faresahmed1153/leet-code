@@ -30,15 +30,16 @@ public class Solution {
 
                 for (int k = 0; k < RemoveAnagrams[i].Length; k++)
                 {
-                    currentWord.TryGetValue(RemoveAnagrams[i][k], out int currentvalue);
-                    nextWord.TryGetValue(RemoveAnagrams[i][k], out int nextvalue);
-                    if (!RemoveAnagrams[i].Contains(RemoveAnagrams[i + 1][k]))
+                     if (!RemoveAnagrams[i].Contains(RemoveAnagrams[i + 1][k]))
                     {
                         isAnagram = false;
                         currentWord.Clear();
                         nextWord.Clear();
                         break;
                     }
+                    currentWord.TryGetValue(RemoveAnagrams[i][k], out int currentvalue);
+                    nextWord.TryGetValue(RemoveAnagrams[i][k], out int nextvalue);
+                   
                     if (currentvalue != nextvalue)
                     {
                         isAnagram = false;
