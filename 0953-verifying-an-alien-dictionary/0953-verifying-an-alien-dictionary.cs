@@ -28,7 +28,7 @@ public class Solution {
 
                         break;
                     }
-                    if (orderOfNextChar < orderOfCurrentChar)
+                    else if (orderOfNextChar < orderOfCurrentChar)
                     {
                         IsAlienSorted = false;
                         break;
