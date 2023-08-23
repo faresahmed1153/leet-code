@@ -33,6 +33,8 @@ public class Solution {
                         IsAlienSorted = false;
                         break;
                     }
+                    else
+                        continue;
                     
                 }
                 if (!IsAlienSorted)
