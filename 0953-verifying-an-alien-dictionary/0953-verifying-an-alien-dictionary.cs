@@ -33,9 +33,10 @@ public class Solution {
                         IsAlienSorted = false;
                         break;
                     }
-                    if (!IsAlienSorted)
-                        break;
+                    
                 }
+                if (!IsAlienSorted)
+                        break;
             }
             return IsAlienSorted;
     }
